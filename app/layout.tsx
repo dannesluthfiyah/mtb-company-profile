@@ -4,7 +4,36 @@ import { Montserrat, Poppins } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "PT. Mahir Trans Bersaudara",
-  description: "Company Profile - PT. Mahir Trans Bersaudara",
+  description:
+    "PT. Mahir Trans Bersaudara berkomitmen memberikan layanan terbaik dalam penyewaan, perbaikan, trucking, ekspedisi, suplai, dan pabrikasi kendaraan berat di seluruh Indonesia.",
+  openGraph: {
+    title: "PT. Mahir Trans Bersaudara",
+    description:
+      "Perusahaan penyewaan, perbaikan, trucking, ekspedisi, suplai, dan pabrikasi kendaraan berat terpercaya di Indonesia.",
+    url: "https://mtb-company-profile.vercel.app",
+    siteName: "PT. Mahir Trans Bersaudara",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "PT. Mahir Trans Bersaudara Logo",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PT. Mahir Trans Bersaudara",
+    description:
+      "Layanan penyewaan, perbaikan, dan pabrikasi kendaraan berat berkualitas tinggi di Indonesia.",
+    images: ["/logo.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  metadataBase: new URL("https://mtb-company-profile.vercel.app"),
 };
 
 // Font untuk heading & navbar
@@ -27,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body
         className={`${montserrat.variable} ${poppins.variable} font-sans bg-white text-gray-900`}
       >
